@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+ }
+
+ section {
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 100px;
+   margin: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header {
+   position: relative; /* Ensure the header has a position set */
+   display: flex; /* Change to flex to align items */
+   justify-content: flex-end; /* Align items to the end (right side) */
+   align-items: center; /* Center items vertically */
+   width: 100%; /* Occupy full width */
+}
+
+.logo {
+   position: relative;
+   max-width: 80px;
+}
+
+.logout-btn {
+   display: inline-block;
+   padding: 10px 15px;
+   font-size: 15px;
+   background: #333;
+   color: #fff;
+   margin-left: 10px;
+   text-transform: capitalize;
+}
+
+/* Adjust positioning for each button */
+.logout-btn:nth-child(1) {
+   margin-right: 10px; /* Add margin between buttons */
+}
+
+.logout-btn:hover {
+   background: green;
+}
+
+
+.user {
+    padding: 20px 100px;
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user h1 span {
+    color: green;
+}
+/* Other styles remain unchanged */
+
+/* Other styles remain unchanged */
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 20px;
+   margin: 20px;
+   flex-direction: row; /* Change flex-direction to row */
+   flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.form-container {
+   width: calc(50% - 40px); /* Occupy 50% of the container width with margins */
+   padding: 20px; /* Adjust padding */
+   margin: 20px; /* Add margin around each form container */
+   box-sizing: border-box; /* Include padding and border in the width */
+}
+.form-container form {
+   margin-top: 20px; /* Add margin at the top of each form */
+}
+
+.ebudgets {
+   flex: 1;
+   padding: 20px 100px;
+   margin: 20px ; /* Add margin at the top and bottom */
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+   text-align: left;
+   width: 80%; /* Occupy full width */
+   background-color: #f4f4f4;
+   margin-top: 20px;
+}
+
+.ebudgets h1 {
+   color: green;
+}
+
+ 
+ .form-container form{
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    text-align: left;
+    width: 500px;
+ }
+ 
+ .form-container form h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 10px;
+    color:#333;
+ }
+ 
+ .form-container form input,
+ .form-container form select{
+    width: 100%;
+    padding:10px 15px;
+    font-size: 17px;
+    margin:8px 0;
+    background: #eee;
+    border-radius: 5px;
+ }
+ 
+ .form-container form select option{
+    background: #fff;
+ }
+ 
+ .form-container form .form-btn{
+    background: #333;
+    color: #eee;
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+ }
+ 
+ .form-container form .form-btn:hover{
+    background: green;
+    color:#fff;
+ }
+ 
+ .form-container form p{
+    margin-top: 10px;
+    font-size: 20px;
+    color:#333;
+ }
+ 
+ .form-container form p a{
+    color:green;
+ }
