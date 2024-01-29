@@ -106,6 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form-container">
             <h2>User's Budgets</h2>
             <form action="" method="post">
+            <p>To add use "+" and then the amount</p>
+            <p>To subtract use "-" and then the amount</p>
                 <?php if ($budgetsResult && mysqli_num_rows($budgetsResult) > 0) {
                     while ($row = mysqli_fetch_assoc($budgetsResult)) {
                         $budgetId = $row['budget_id'];

@@ -23,10 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['budgetName']) && isset($_POST['budgetAmount'])) {
         $budgetName = mysqli_real_escape_string($conn, $_POST['budgetName']);
         $budgetAmount = mysqli_real_escape_string($conn, $_POST['budgetAmount']);
+        $budgetGoal = mysqli_real_escape_string($conn, $_POST['budgetGoal']);
         $user_id = $_SESSION['user_id']; // Assuming you have user_id stored in session
 
         // Insert new budget into the database
-        $insertBudget = "INSERT INTO budgets (user_id, budget_name, amount) VALUES ('$user_id', '$budgetName', '$budgetAmount')";
+        $insertBudget = "INSERT INTO budgets (user_id, budget_name, amount, goal) VALUES ('$user_id', '$budgetName', '$budgetAmount', '$budgetGoal')";
         $result = mysqli_query($conn, $insertBudget);
 
         if (!$result) {
@@ -118,6 +119,8 @@ $budgetsResult = mysqli_query($conn, $getBudgets);
                 <input type="text" name="budgetName" required placeholder="e.g Transport">
                 <h3>Amount</h3>
                 <input type="number" name="budgetAmount" required placeholder="e.g 500">
+                <h3>Financial Goal</h3>
+                <input type="number" name="budgetGoal" required placeholder="Enter your financial goal">
                 <input type="submit" value="Create Budget" class="form-btn">
             </form>
         </div>
